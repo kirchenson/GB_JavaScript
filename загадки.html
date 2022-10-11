@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	let answer1=['морковь','Морковь'];
+	let answer2=['замок','Замок','щеколда','Щеколда'];
+	let answer3=['Капуста','капуста'];
+	let answer4=['Лук','лук','луковица','Луковица'];
+	var count=0;
+	
+
+	var userAnswer=prompt('Сидит в темнице, красная девица, а коса на улице.');
+	if (answer1.includes(userAnswer)==true){
+		alert('Правильный ответ');
+		count++
+	}
+	else {
+		alert('Неправильный ответ')
+	}
+
+	var userAnswer=prompt('Не лает, не кусает, а в дом не пускает.');
+	if (answer2.includes(userAnswer)==true){
+		alert('Правильный ответ');
+		count++
+	}
+	else {
+		alert('Неправильный ответ')
+	}
+	var userAnswer=prompt('Сто одёжек и все без застежек.');
+	if (answer3.includes(userAnswer)==true){
+		alert('Правильный ответ');
+		count++
+	}
+	else {
+		alert('Неправильный ответ')
+	}
+	var userAnswer=prompt('Сидит дед, в шубу одет, кто его раздевает, тот слёзы проливает.');
+	if (answer4.includes(userAnswer)==true){
+		alert('Правильный ответ');
+		count++
+	}
+	else {
+		alert('Неправильный ответ')
+	}
+	alert('Количество правильных ответов: '+count )
+</script>

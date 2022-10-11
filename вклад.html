@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var sum=+prompt('Сумма вклада: ')
+	var percent=+prompt('Процент: ')
+	document.write('Размер вклада поочередно на ближайшие 5 лет<br>')
+	for (i=1;i<=5;i++){
+		sum=sum+(sum*percent/100)
+		document.write(sum + '<br>')
+	}
+
+
+</script>
