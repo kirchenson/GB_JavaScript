@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	function generateText(letters,length){
+		var text=''
+		for(var i=0;i<length;i++){
+			var n=getRandom(letters.length-1);
+			text=text+letters[n];
+		}
+		return text
+	}
+	function getRandom(max){
+		return Math.round(Math.random()*max);
+	}
+	var numLevel=1
+	let rules=['Положите 4 пальца левой руки - мезинец, безымянный, средний и указательный- на клавиши ф, ы, в, а. Запомните, что буква А находится под вашим указательным пальцем, а Ф - под мезинцем.\nТеперь неспеша набирайте текст.Постарайтесь не смотреть на клавиатуру.','Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев. Повторяйте за мной','Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний -— на Л, указательный — на О. Запомните расположение пальцев']
+	function level(){
+		
+		while(true){
+			
+			if (numLevel==1){
+				var text = generateText(['а','ф'],10);
+				alert(rules[0]);
+		}
+			else if (numLevel==2){
+				var text = generateText(['д','л'],10);
+				alert(rules[1]);		}
+			else if (numLevel==3){
+				var text = generateText(['о','ж'],10);
+				alert(rules[2]);
+		}
+			var userText=prompt(text);
+			if(userText==text){
+				alert('Всё верно! Переходим к следующему уровню.')
+				numLevel++
+				if (numLevel == 4){
+				alert('Уровни кончились,поздравляю')
+				break;
+				}
+
+			}
+			else {
+				alert('неверно')
+			}
+			
+			
+		}
+	}
+	alert('Вас приветствует программа по обучению слепой печати');
+	level()
+
+</script>

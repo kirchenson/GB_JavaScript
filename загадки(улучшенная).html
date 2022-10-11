@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	let answers=[['морковь','Морковь'],['замок','Замок','щеколда','Щеколда'],['Капуста','капуста'],['Лук','лук','луковица','Луковица']];
+	var count=0;
+	let questions=['Сидит в темнице, красная девица, а коса на улице.','Не лает, не кусает, а в дом не пускает.','Сто одёжек и все без застежек.','Сидит дед, в шубу одет, кто его раздевает, тот слёзы проливает.']
+	
+	function answer(){
+		for(var i=0;i<4;i++){
+
+			var userAnswer=prompt(questions[i]);
+			if ((answers[i].includes(userAnswer)==true) & i==0){
+				alert('Вы дали правильный ответ на первую загадку, поэтому игра закончена.');
+				count++
+				break;
+			}
+			else if (answers[i].includes(userAnswer)==true){
+				alert('Правильный ответ');
+				count++;
+			}
+			
+			else {
+				alert('Неправильный ответ');
+			}
+		}
+	}
+	var r = answer();
+	alert('Количество правильных ответов '+ count);
+</script>
